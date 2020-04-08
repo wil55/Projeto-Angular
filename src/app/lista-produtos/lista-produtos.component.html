@@ -1,0 +1,43 @@
+<div class="flex fill column lista-produtos">
+
+
+  <div class="flex row produto" *ngFor="let produto of produtos">
+    <img [src]="produto.urlImagem">
+
+    <!-- <div class="espaco"></div> -->
+
+    <div class="grow flex column descricao-produto">
+
+      <div>
+        <h2>
+          {{ produto.titulo }}
+        </h2>
+
+        <p>
+          {{ produto.descricaoCompleta }}
+        </p>
+        <p>
+          {{ produto.formaPagamento }}
+        </p>
+        <p>
+          {{ produto.quilometragem}}
+        </p>
+      </div>
+
+      <div class="grow"></div>
+
+      <div class="flex row">
+        <h3>
+          {{ produto.valor }}
+        </h3>
+        <div class="grow"></div>
+        <button routerLink="/exemploNgModel" mat-button>Informações</button>
+      </div>
+
+    </div>
+
+    <!-- <div class="espaco"></div> -->
+
+  </div>
+
+</div>
